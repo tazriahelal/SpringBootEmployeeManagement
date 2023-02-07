@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" xlmns:th="http://www.thymeleaf.com">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+  <title>Home page</title>
+</head>
+<body>
+<!-- Navbar -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Employee System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="#">Home
+        <span class="sr-only">(current)</span>
+      </a></li>
+      <li class="nav-item active"><a class="nav-link" href="addEmployee">Add
+        Employee</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- Navbar -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="text-center text-primary">Add Employee</h4>
+
+          <form th:action="@{/employeeRegister}" method="post">
+
+            <div class="form-group">
+              <label>Enter Full Name</label> <input type="text"
+                                                    class="form-control" name="employeeName;
+">
+            </div>
+
+            <div class="form-group">
+              <label>Enter Address</label> <input type="text"
+                                                  class="form-control" name="employeeAddress">
+            </div>
+
+            <div class="form-group">
+              <label>Enter Email</label> <input type="email"
+                                                class="form-control" name="employeeEmail">
+            </div>
+
+
+            <div class="form-group">
+              <label>Enter Phone No</label> <input type="number"
+                                                   class="form-control" name="employeePhone">
+            </div>
+
+
+            <div class="form-group">
+              <label>Enter Salary</label> <input type="number"
+                                                 class="form-control" name="employeeSalary">
+            </div>
+
+            <button class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
